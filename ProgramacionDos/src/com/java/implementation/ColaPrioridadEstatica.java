@@ -17,7 +17,7 @@ public class ColaPrioridadEstatica implements ColaPrioridadTDA {
 		e = new Elem[100];
 	}
 	
-	public boolean estaVacia(){
+	public boolean colaVacia(){
 		return indice == 0;
 	}
 	
@@ -29,17 +29,20 @@ public class ColaPrioridadEstatica implements ColaPrioridadTDA {
 	}
 
 	public void acolarPrioridad(int valor, int prioridad) {
-		// TODO Auto-generated method stub
 		
+		int i = indice -1;
+		while(prioridad > e[i].p && i>=0) {
+			e[i+1] = e[i];
+			i--;
+		}
+		e[i+1] = new Elem();
+		e[i+1].v = valor;
+		e[i+1].p = prioridad;
+		indice++;
 	}
 
 	public int primero() {
 		return  e[0].v;
-	}
-
-	public boolean colaVacia() {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
 	public int prioridad() {

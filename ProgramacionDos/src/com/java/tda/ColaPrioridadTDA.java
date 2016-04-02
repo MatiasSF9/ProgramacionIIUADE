@@ -1,14 +1,16 @@
 package com.java.tda;
 
 public interface ColaPrioridadTDA {
-    //Inicializa la Cola
-    //Pre: ninguna
-    //Post: estructura creada
+    /**Inicializa la Cola
+      *Pre: ninguna
+      *Post: estructura creada
+      **/
     void inicializarColaPrioridad();
 
-    //Agrega un valor a la estructura de acuerdo a su prioridad
-    //PRE: estructura inicializada
-    //POST: estructura modificada en un valor mas
+    /**Agrega un valor a la estructura de acuerdo a su prioridad
+      *PRE: estructura inicializada
+      *POST: estructura modificada en un valor mas
+      **/
     void acolarPrioridad(int valor, int prioridad);
 
     //Remueve un elemento de la estructura con mayor prioridad
