@@ -20,12 +20,12 @@ public interface DiccionarioMultipleTDA {
     //Deuvelve el conjunto con todos los valores asociados a la clave
     //Pre: Inicializada y que exista la clave
     //Pos: -
-    int recuperar(int clave);
+    ConjuntoTDA recuperar(int clave);
 
     //Elimina la clave y su valor asociado
     //Pre: inicializada
     //Pos: modificada con un par k v menos
-    void eliminar(int clave);
+    void eliminarClave(int clave);
 
 
     //Elimina el valor asociado a la clave. Si es el único valor, elimina la clave también
